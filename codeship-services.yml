@@ -10,4 +10,4 @@ awsdeployment:
   environment:
     - AWS_DEFAULT_REGION=us-east-1
   volumes:
-    - ./:/deploy
+    - ./:/target
