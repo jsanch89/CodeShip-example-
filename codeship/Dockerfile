@@ -7,3 +7,4 @@ RUN wget -nv https://github.com/codacy/codacy-coverage-reporter/releases/downloa
     mv codacy-coverage-reporter*.jar codacy-coverage-reporter.jar
 COPY . .
 RUN mvn cobertura:cobertura -Dcobertura.report.format=xml -Pci
+RUN aws-cli

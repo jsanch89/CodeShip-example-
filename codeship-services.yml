@@ -1,4 +1,5 @@
 app:
+  image: codeship/aws-deployment
   build:
     image: psl-devops/poc-cd
     dockerfile: codeship/Dockerfile
@@ -10,3 +11,4 @@ awsdeployment:
     - AWS_DEFAULT_REGION=us-east-1
   volumes:
     - ./target:/target
+  
