@@ -11,7 +11,7 @@
   command: mvn -B package -DskipTests -Pci
 
 - name: Deploy
-  tag: master
   service: app
-  command: mvn -B -s settings.xml heroku:deploy -DskipTests -Pci
+  command: aws s3 cp /target/poc-cd-0.1.0-SNAPSHOT.jar s3://grupotocinoxd1
+
 
