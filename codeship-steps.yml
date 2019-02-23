@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - name: Test
   service: app
   command: mvn -B cobertura:cobertura -Dcobertura.report.format=xml -Pci
@@ -14,3 +15,19 @@
   tag: master
   service: app
   command: mvn -B -s settings.xml heroku:deploy -DskipTests -Pci
+=======
+- type: parallel
+  name: example_parallel_step
+  steps:
+    - service: codeship_example
+      command: printenv
+    - service: codeship_example
+      # shell wrapper not required unless passing along env vars or combining commands
+      command: /bin/bash -c 'ls && echo ${CI_BUILD_ID}'
+- name: example_tagged_step
+  tag: master
+  service: codeship_example
+  command: echo "Deploy here!"
+- service: awsdeployment
+  command: aws s3 cp /target/poc-cd-0.1.0-SNAPSHOT.jar s3://grupotocinoxd1
+>>>>>>> f4c63bbf29262eefd24833b92b5517076600c8aa

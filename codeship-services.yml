@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 app:
   build:
     image: psl-devops/poc-cd
     dockerfile: codeship/Dockerfile
   encrypted_env_file: codeship/env.encrypted
   cached: true
+=======
+codeship_example:
+  build:
+    image: codeship_example
+    dockerfile: Dockerfile
+  environment:
+    EXAMPLE_ENV_VAR: example-var
+>>>>>>> f4c63bbf29262eefd24833b92b5517076600c8aa
