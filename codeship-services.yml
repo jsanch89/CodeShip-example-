@@ -4,3 +4,4 @@ app:
     dockerfile: codeship/Dockerfile
   encrypted_env_file: codeship/env.encrypted
   cached: true
+
