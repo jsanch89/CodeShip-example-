@@ -9,4 +9,4 @@
 
 - name: Send
   service: app
-  command: aws s3 cp /target/poc-cd-0.1.0-SNAPSHOT.jar s3://grupotocinoxd1
+  command: aws s3 cp ./target/poc-cd-0.1.0-SNAPSHOT.jar s3://grupotocinoxd1
